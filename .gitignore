@@ -57,4 +57,8 @@ docs/_build/
 # PyBuilder
 target/
 
+#Jetbrains
 .idea/
+
+#Heroku Environment
+.env
