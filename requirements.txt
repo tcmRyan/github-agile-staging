@@ -1,0 +1,9 @@
+Flask==0.10.1
+Flask-Migrate
+flask-login
+flask-sqlalchemy==0.16
+flask-bcrypt
+requests
+gunicorn
+psycopg2
+alembic
