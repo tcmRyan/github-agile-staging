@@ -1,11 +1,14 @@
-
 from backend.models import Vendor
-import os
+from backend import db
 
 
-def create_test(test):
-    os.environ['TEST'] = test
+def create_vendor(vendor_name, client_id, client_secret):
+    vendor = Vendor(vendor_name, client_id, client_secret)
+    db.session.add(vendor)
+    db.session.commit()
 
 if __name__ == '__main__':
-    test = raw_input("Enter Test String: ")
-    create_test(test)
+    vendor_name = raw_input("Enter Vendor Name: ")
+    client_id = raw_input("Enter Client ID: ")
+    client_secret = raw_input("Enter Client Secret: ")
+    create_vendor(vendor_name, client_id, client_secret)
