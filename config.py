@@ -9,7 +9,7 @@ class Config(object):
     CSRF_ENABLED = True
     SECRET_KEY = 'c2zaLiRQEhOb'
 
-class Production(Config):
+class ProductionConfig(Config):
     DEBUG = False
 
 class StagingConfig(Config):
